@@ -1,0 +1,15 @@
+<div id = "contenedor">
+<h1>Listado de productos</h1>
+
+    <% @productos.each do |producto| %>
+    <hr />
+    <div class="entrada">
+      <h3><%= producto.articulos %></h3>
+      <p>Cantidad: <%= producto.cantidad %></p>
+      <p>Descripcion: <%= producto.descripcion %></p>
+      <p><%= link_to 'Mostrar', producto %> - <%= link_to 'Editar', edit_producto_path(producto) %> - <%= link_to 'Eliminar', producto, method: :delete, data: { confirm: '¿Estas seguro?' } %></p>
+    <% end %>
+<br>
+
+<%= link_to 'Nuevo producto', new_producto_path %>
+</div>
