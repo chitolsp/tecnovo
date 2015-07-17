@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<%=simple_form_for(@producto) do |f|%>
+	
+	<%= f.hint :articulos%>
+	<%= f.hint :cantidad%>
+	<%= f.hint :precio%>
+	<%= f.hint :descripcion%>
+
+
+
+<%end%>
+
+
+<!--
 <p>
   <strong>Articulos:</strong>
   <%= @producto.articulos %>
@@ -20,5 +33,6 @@
   <%= @producto.descripcion %>
 </p>
 
-<%= link_to 'Editar', edit_producto_path(@producto) %> |
-<%= link_to 'Atras', productos_path %>
+<%= link_to 'Atras', productos_path, class: "btn btn-warning" %> |
+<%= link_to 'Editar', edit_producto_path(@producto), class: "btn btn-primary" %>
+-->

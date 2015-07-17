@@ -7,12 +7,12 @@
 {
 	display: none;
 }
-.productos.hover
+.productos:hover
 {
 	background: #EBFFF3;
 }
 
-.productos.hover .admin
+.productos:hover .admin
 {
 	display: inline;
 }
